@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="EGXA Project — We craft premium digital experiences. Specializing in web development and mobile app creation. Let's build something extraordinary together." />
+  <meta property="og:title" content="EGXA Project · Digital Experiences" />
+  <meta property="og:description" content="We craft premium digital experiences. Web & Mobile App Development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://egxaproject.web.id" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EGXA Project · Digital Experiences" />
+  <meta name="theme-color" content="#050505" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <title>EGXA Project · Digital Experiences</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" class="cursor">
+    <div id="cursor-dot" class="cursor-dot"></div>
+    <div id="cursor-ring" class="cursor-ring"></div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">EGXA</div>
+      <div class="loader-bar-wrap">
+        <div id="loader-bar" class="loader-bar"></div>
+      </div>
+      <div id="loader-pct" class="loader-pct">0%</div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" id="nav-logo" aria-label="EGXA Project Home">EGXA</a>
+    <div class="nav-links">
+      <a href="#about" class="nav-link" id="nav-about">About</a>
+      <a href="#services" class="nav-link" id="nav-services">Services</a>
+      <a href="#work" class="nav-link" id="nav-work">Work</a>
+      <a href="#contact" class="nav-link nav-cta" id="nav-contact">Let's Talk</a>
+    </div>
+    <button class="nav-burger" id="nav-burger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="#about" class="mobile-link" id="mm-about">About</a>
+    <a href="#services" class="mobile-link" id="mm-services">Services</a>
+    <a href="#work" class="mobile-link" id="mm-work">Work</a>
+    <a href="#contact" class="mobile-link" id="mm-contact">Let's Talk</a>
+  </div>
+
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="section-hero" aria-label="Hero">
+      <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <div class="hero-eyebrow" id="hero-eyebrow">Digital Studio · Est. 2024</div>
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-title-line" id="hero-line1">We craft</span>
+          <span class="hero-title-line hero-title-gradient" id="hero-line2">extraordinary</span>
+          <span class="hero-title-line" id="hero-line3">experiences.</span>
+        </h1>
+        <p class="hero-sub" id="hero-sub">EGXA Project — Web &amp; Mobile App Development Studio</p>
+        <div class="hero-actions" id="hero-actions">
+          <a href="#work" class="btn-primary magnetic-btn" id="btn-hero-work" data-magnetic>
+            <span>View Our Work</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn-ghost" id="btn-hero-contact">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" id="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-about" aria-label="About EGXA Project">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="section-label reveal-fade" id="about-label">About</div>
+            <h2 class="section-title reveal-up" id="about-title">
+              What is<br/><span class="gradient-text">EGXA Project?</span>
+            </h2>
+            <div class="about-description">
+              <p class="reveal-fade" id="about-p1">
+                EGXA Project is a passionate digital studio that blends artistry with technology to create stunning digital experiences that leave a mark.
+              </p>
+              <p class="reveal-fade" id="about-p2">
+                We specialize in building high-performance websites and mobile applications — from concept to launch — with obsessive attention to detail, performance, and user experience.
+              </p>
+            </div>
+            <div class="about-stats reveal-up" id="about-stats">
+              <div class="stat-item">
+                <span class="stat-number" id="stat-projects" data-count="50">0</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" id="stat-clients" data-count="30">0</span>
+                <span class="stat-label">Clients</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" id="stat-years" data-count="2">0</span>
+                <span class="stat-label">Years Exp.</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual reveal-fade" id="about-visual">
+            <div class="about-card-stack">
+              <div class="about-card about-card--back"></div>
+              <div class="about-card about-card--front">
+                <div class="about-card-inner">
+                  <div class="about-card-icon">⚡</div>
+                  <div class="about-card-label">Fast Delivery</div>
+                  <div class="about-card-text">On time, every time. We ship with precision and care.</div>
+                </div>
+              </div>
+            </div>
+            <div class="about-orb" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-services" aria-label="Services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label reveal-fade" id="services-label">What We Do</div>
+          <h2 class="section-title reveal-up" id="services-title">
+            Services we<br/><span class="gradient-text">offer</span>
+          </h2>
+        </div>
+        <div class="services-grid" id="services-grid">
+          <article class="service-card tilt-card reveal-up" id="svc-web" tabindex="0">
+            <div class="service-card-glow"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="url(#g1)" stroke-width="1.5"/><path d="M8 16h16M16 8c-3 3-3 13 0 16M16 8c3 3 3 13 0 16" stroke="url(#g1)" stroke-width="1.5"/><defs><linearGradient id="g1" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-desc">High-performance websites, web apps, and dashboards built with modern frameworks and cutting-edge tech.</p>
+            <div class="service-tags">
+              <span>React</span><span>Next.js</span><span>Laravel</span>
+            </div>
+            <div class="service-arrow" aria-hidden="true">→</div>
+          </article>
+
+          <article class="service-card tilt-card reveal-up" id="svc-mobile" tabindex="0" style="--delay: 0.1s">
+            <div class="service-card-glow"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="9" y="4" width="14" height="24" rx="3" stroke="url(#g2)" stroke-width="1.5"/><circle cx="16" cy="24" r="1.5" fill="url(#g2)"/><line x1="12" y1="8" x2="20" y2="8" stroke="url(#g2)" stroke-width="1.5" stroke-linecap="round"/><defs><linearGradient id="g2" x1="9" y1="4" x2="23" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
+            </div>
+            <h3 class="service-title">Mobile Apps</h3>
+            <p class="service-desc">Beautiful, native-feeling iOS and Android apps built with React Native, designed for delightful UX.</p>
+            <div class="service-tags">
+              <span>React Native</span><span>iOS</span><span>Android</span>
+            </div>
+            <div class="service-arrow" aria-hidden="true">→</div>
+          </article>
+
+          <article class="service-card tilt-card reveal-up" id="svc-design" tabindex="0" style="--delay: 0.2s">
+            <div class="service-card-glow"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 26l7-7 4 4 9-13" stroke="url(#g3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="4" stroke="url(#g3)" stroke-width="1.5"/><defs><linearGradient id="g3" x1="6" y1="6" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
+            </div>
+            <h3 class="service-title">UI/UX Design</h3>
+            <p class="service-desc">User-centered design that converts. From wireframes to pixel-perfect interfaces that users love.</p>
+            <div class="service-tags">
+              <span>Figma</span><span>Prototyping</span><span>Design Systems</span>
+            </div>
+            <div class="service-arrow" aria-hidden="true">→</div>
+          </article>
+
+          <article class="service-card tilt-card reveal-up" id="svc-consult" tabindex="0" style="--delay: 0.3s">
+            <div class="service-card-glow"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4 8h24v12a4 4 0 01-4 4H8a4 4 0 01-4-4V8z" stroke="url(#g4)" stroke-width="1.5"/><path d="M10 24l-2 4h16l-2-4" stroke="url(#g4)" stroke-width="1.5" stroke-linecap="round"/><path d="M10 14h12M10 18h7" stroke="url(#g4)" stroke-width="1.5" stroke-linecap="round"/><defs><linearGradient id="g4" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
+            </div>
+            <h3 class="service-title">Tech Consulting</h3>
+            <p class="service-desc">Strategic technical guidance to help your business navigate digital transformation and make the right technology choices.</p>
+            <div class="service-tags">
+              <span>Strategy</span><span>Architecture</span><span>Advisory</span>
+            </div>
+            <div class="service-arrow" aria-hidden="true">→</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work / Projects Section -->
+    <section id="work" class="section-work" aria-label="Our Work">
+      <div class="work-header container">
+        <div class="section-label reveal-fade" id="work-label">Portfolio</div>
+        <h2 class="section-title reveal-up" id="work-title">
+          Selected<br/><span class="gradient-text">Work</span>
+        </h2>
+      </div>
+      <div class="projects-track-wrap" id="projects-track-wrap">
+        <div class="projects-track" id="projects-track">
+
+          <article class="project-card" id="proj-1" aria-label="E-Commerce Platform">
+            <div class="project-thumb">
+              <img src="/project_web.png" alt="E-Commerce Platform" loading="lazy" />
+              <div class="project-overlay">
+                <canvas class="distortion-canvas" data-project="1" aria-hidden="true"></canvas>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-num">01</span>
+              <h3 class="project-title">E-Commerce Platform</h3>
+              <p class="project-type">Web Development · Laravel + React</p>
+            </div>
+          </article>
+
+          <article class="project-card" id="proj-2" aria-label="Delivery Mobile App">
+            <div class="project-thumb">
+              <img src="/project_mobile.png" alt="Delivery App" loading="lazy" />
+              <div class="project-overlay">
+                <canvas class="distortion-canvas" data-project="2" aria-hidden="true"></canvas>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-num">02</span>
+              <h3 class="project-title">Delivery Mobile App</h3>
+              <p class="project-type">Mobile Development · React Native</p>
+            </div>
+          </article>
+
+          <article class="project-card" id="proj-3" aria-label="SaaS Dashboard">
+            <div class="project-thumb">
+              <img src="/project_web.png" alt="SaaS Dashboard" loading="lazy" />
+              <div class="project-overlay">
+                <canvas class="distortion-canvas" data-project="3" aria-hidden="true"></canvas>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-num">03</span>
+              <h3 class="project-title">SaaS Analytics Dashboard</h3>
+              <p class="project-type">Web Development · Next.js</p>
+            </div>
+          </article>
+
+          <article class="project-card" id="proj-4" aria-label="Food Ordering App">
+            <div class="project-thumb">
+              <img src="/project_mobile.png" alt="Food Ordering App" loading="lazy" />
+              <div class="project-overlay">
+                <canvas class="distortion-canvas" data-project="4" aria-hidden="true"></canvas>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-num">04</span>
+              <h3 class="project-title">Food Ordering App</h3>
+              <p class="project-type">Mobile Development · React Native</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <div class="projects-drag-hint" id="drag-hint" aria-hidden="true">
+        <span>Drag to explore</span>
+        <div class="drag-arrow">→</div>
+      </div>
+    </section>
+
+    <!-- Contact / CTA Section -->
+    <section id="contact" class="section-contact" aria-label="Contact">
+      <canvas id="contact-canvas" class="contact-canvas" aria-hidden="true"></canvas>
+      <div class="container contact-inner">
+        <div class="section-label reveal-fade" id="contact-label">Let's Work Together</div>
+        <h2 class="contact-title reveal-up" id="contact-title">
+          Have a project in mind?
+        </h2>
+        <p class="contact-sub reveal-fade" id="contact-sub">
+          We're open to new projects — websites, mobile apps, or just a consultation. Drop us a line.
+        </p>
+        <div class="contact-actions reveal-up" id="contact-actions">
+          <a href="mailto:eafirnando.tech@gmail.com" class="btn-primary magnetic-btn" id="btn-email" data-magnetic aria-label="Send email to EGXA Project">
+            <span>Send an Email</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4l6 5 6-5M2 4h12v8H2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://wa.me/62895606093680" class="btn-ghost" id="btn-wa" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+            <span>WhatsApp</span>
+          </a>
+        </div>
+        <div class="contact-socials reveal-fade" id="contact-socials">
+          <a href="https://github.com/egxadev" class="social-link" id="social-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://instagram.com/egaalfy" class="social-link" id="social-ig" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://linkedin.com/in/egaalifyafirnando" class="social-link" id="social-li" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-logo">EGXA</div>
+      <p class="footer-copy">© 2026 EGXA Project. Crafted with passion.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
